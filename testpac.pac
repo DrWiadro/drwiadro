@@ -9,6 +9,7 @@ function FindProxyForURL(url, host) {
         return "DIRECT";
     }
     
-    return "HTTPS eproxy-testeuroclear.goskope.com:443";
+    return "HTTPS eproxy-*****.goskope.com:443";
 }
+
 
