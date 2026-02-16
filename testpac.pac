@@ -1,5 +1,4 @@
 function FindProxyForURL(url, host) {
-    // Bypass Netskope domains and local/private IPs
     if (shExpMatch(host, "*.goskope.com") ||
         shExpMatch(host, "163.116.*") ||
         isPlainHostName(host) ||
@@ -10,6 +9,6 @@ function FindProxyForURL(url, host) {
         return "DIRECT";
     }
     
-    // Proxy everything else via eproxy with mTLS (HTTPS proxy type)
     return "HTTPS eproxy-testeuroclear.goskope.com:443";
 }
+
